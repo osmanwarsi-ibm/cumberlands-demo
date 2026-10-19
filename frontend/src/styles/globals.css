@@ -1,0 +1,167 @@
+/* Design system extracted from wireframe_login.html */
+:root {
+  /* Colors */
+  --bg: #F5F2EA;
+  --sf: #FFFFFF;
+  --sf2: #EDE9DC;
+  --ink: #17231F;
+  --ink2: #46544E;
+  --line: #CFC8B6;
+  --pr: #0E5A57;
+  --prd: #0A3F3D;
+  --gn: #1D6B3B;
+  --gnb: #E1F0E5;
+  --am: #7F4C00;
+  --amb: #FBEBC8;
+  --rd: #9E1F1F;
+  --rdb: #F8DEDC;
+  --bl: #1F4E8C;
+  --blb: #E0EAF7;
+  --gy: #3F4A45;
+  --gyb: #E7E4DA;
+
+  /* Semantic colors */
+  --border: #CFC8B6;
+  --blue-border: #1F4E8C;
+  --blue-text: #1F4E8C;
+  --red-bg: #F8DEDC;
+  --red-border: #9E1F1F;
+  --red-text: #9E1F1F;
+
+  /* Typography */
+  --fh: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --fb: "Segoe UI", "Helvetica Neue", Helvetica, sans-serif;
+  --fm: "Cascadia Mono", Consolas, Menlo, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--fb);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+:focus-visible {
+  outline: 3px solid #1F4E8C;
+  outline-offset: 2px;
+}
+
+h1 {
+  font-family: var(--fh);
+  font-size: 32px;
+  margin: 0 0 6px;
+}
+
+h2 {
+  font-family: var(--fh);
+  font-size: 20px;
+  margin: 0 0 12px;
+}
+
+h3 {
+  font-family: var(--fb);
+  font-size: 16px;
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+.sub {
+  color: var(--ink2);
+  margin: 0 0 22px;
+  font-size: 16px;
+}
+
+.hint {
+  font-size: 13px;
+  color: var(--ink2);
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font-family: var(--fb);
+  font-size: 15px;
+  background: var(--sf);
+  color: var(--ink);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+  outline: 3px solid var(--bl);
+  outline-offset: 2px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  font-weight: 700;
+  font-size: 16px;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.page {
+  min-width: 1440px;
+  width: 100%;
+  background: var(--bg);
+  position: relative;
+}
+
+main {
+  width: 100%;
+  padding: 28px 32px 48px;
+}
+
+.row {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.col {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+footer {
+  padding: 16px 32px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--ink2);
+}

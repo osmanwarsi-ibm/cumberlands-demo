@@ -1,0 +1,40 @@
+# Virtual environments
+.venv
+venv
+__pycache__
+
+# Git
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# Test artifacts
+.pytest_cache
+.coverage
+htmlcov
+test-results.xml
+
+# Environment files
+.env
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+
+# Build artifacts
+dist
+build
+*.egg-info
+
+# Documentation
+docs
+*.md
