@@ -1,0 +1,12 @@
+{
+  "name": "cumberlands-demo-e2e",
+  "version": "1.0.0",
+  "private": true,
+  "description": "E2E tests for Cumberland Farms DSD Vendor Receiving Reconciliation MVP",
+  "scripts": {
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.1"
+  }
+}

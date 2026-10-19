@@ -1,0 +1,32 @@
+# Docker Compose override for PostgreSQL database
+# Usage: docker-compose -f docker-compose.yml -f docker-compose.postgres.yml up --build
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_USER=cumberlands
+      - POSTGRES_PASSWORD=cumberlands-dev-password
+      - POSTGRES_DB=reconciliation
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cumberlands"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      args:
+        INSTALL_SPEC: ".[postgres]"
+    environment:
+      - DATABASE_URL=postgresql+psycopg://cumberlands:cumberlands-dev-password@postgres:5432/reconciliation
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
